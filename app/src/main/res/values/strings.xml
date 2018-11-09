@@ -3,4 +3,5 @@
     <string name="label_principal">Olá Mundo!</string>
     <string name="botao_principal">CLIQUE AQUI.</string>
     <string name="label_segunda">Segunda Activity</string>
+    <string name="label_cursores">Cursores Activity</string>
 </resources>

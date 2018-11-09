@@ -8,7 +8,7 @@ import android.util.Log;
 public class DBHelper extends SQLiteOpenHelper {
 
     private static final String NOME_BANCO = "meuapp.db";
-    private static final int VERSAO_BANCO = 5;
+    private static final int VERSAO_BANCO = 6;
 
     public DBHelper(Context context) {
         super(context, NOME_BANCO, null, VERSAO_BANCO);
@@ -49,6 +49,15 @@ public class DBHelper extends SQLiteOpenHelper {
                 Log.d("DBHelper", "atualização para versão 4");
             case 4:
                 Log.d("DBHelper", "atualização para versão 5");
+            case 5:
+                String sqlClientes =  "CREATE TABLE IF NOT EXISTS clientes (" +
+                        "_id INTEGER PRIMARY KEY," +
+                        "nome VARCHAR(255)," +
+                        "email VARCHAR(255)" +
+                        ");";
+
+                db.execSQL(sqlClientes);
+
         }
     }
 }

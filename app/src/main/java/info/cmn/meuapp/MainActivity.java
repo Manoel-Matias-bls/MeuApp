@@ -48,5 +48,7 @@ public class MainActivity extends AppCompatActivity {
         DBHelper db = new DBHelper(getBaseContext());
         db.getReadableDatabase();
 
+        startActivity(new Intent(getBaseContext(), CursoresActivity.class));
+
     }
 }
